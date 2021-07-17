@@ -33,9 +33,7 @@ class AnyCar {
     
 }
 
-class SubClassSportCar: AnyCar{
-    
-}
+class SubClassSportCar: AnyCar{}
 
 var sportCar1 = SubClassSportCar(mark: "Ferrary", ageCar: 2018, color: "red", km: 0.0, engine: AnyCar.EngineStatus.on)
 
