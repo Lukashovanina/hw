@@ -1,5 +1,3 @@
-
-
 import Foundation
 
 
@@ -20,23 +18,23 @@ struct SportCar {
 
     var mark: String
 
-       var model: String
+    var model: String
 
-         var ageCar: Int
+    var ageCar: Int
 
-           var color: String
+    var color: String
 
-             var engine: Double
+    var engine: Double
 
-               var trunkStatus: CarTrunkStatus
+    var trunkStatus: CarTrunkStatus
 
-    mutating func fullTrunkStatus() {
+mutating func fullTrunkStatus() {
 
         self.trunkStatus = .full
 
     }
 
-    mutating func uploaderTrunkStaus() {
+mutating func uploaderTrunkStaus() {
 
         self.trunkStatus = .uploader
 
@@ -45,7 +43,7 @@ struct SportCar {
     
     var sunroofState: CarSunroofState {
 
-        willSet {
+     willSet {
 
         if newValue == .close{
 
@@ -97,9 +95,9 @@ if car1.ageCar > car.ageCar {
 
    } else if car1.ageCar == car.ageCar {
 
-    print ("Машины одного года выпуска")
+      print ("Машины одного года выпуска")
 
- } else {
+       } else {
 
     print( m1, "старее", m2)
 
@@ -118,27 +116,27 @@ struct TrunkCar {
 
     var mark: String
 
-       var ageCar: Int
+    var ageCar: Int
 
-          var bodyWork: Int
+    var bodyWork: Int
 
-            let typeBodyWork: String
+    let typeBodyWork: String
 
-               var bodyWorkStatus: CarBodyWorkStatus
+    var bodyWorkStatus: CarBodyWorkStatus
 
-    func description() {
+func description() {
 
         print("Автомобиль марки  \(mark) имеет тип кузова \(typeBodyWork)")
 
     }
 
-    mutating func withCargoBodyWork() {
+mutating func withCargoBodyWork() {
 
         self.bodyWorkStatus = .withCargo
 
    }
 
-    mutating func withoutCargoBodyWork() {
+mutating func withoutCargoBodyWork() {
 
         self.bodyWorkStatus = .withoutCargo
 
@@ -146,7 +144,7 @@ struct TrunkCar {
 
     var km: Double {
 
-    didSet {
+didSet {
 
         let trip = km - oldValue
 
@@ -169,6 +167,9 @@ trunkCar.description()
 
 print(trunkCar.km)
 
+
+
+print(car,"\n",car1,"\n", trunkCar)
 
 
 print(car,"\n",car1,"\n", trunkCar)
