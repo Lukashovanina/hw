@@ -47,11 +47,11 @@ mutating func uploaderTrunkStaus() {
 
         if newValue == .close{
 
-        print("Все окна \(SportCar.self) сейчас закроются")
+        print("Люк \(SportCar.self) сейчас закроется")
 
         } else{
 
-        print ("Все окна\(SportCar.self) сейчас закроются")
+        print ("Люк\(SportCar.self) сейчас откроется")
 
         }
 
@@ -68,7 +68,7 @@ var car = SportCar (mark: "Ferrari", model: "Roma", ageCar: 2019, color: "Кра
 
 car.sunroofState = .close
 
-
+print(car.sunroofState)
 var car1 = car
 
 car1.model = "812 Gts"
