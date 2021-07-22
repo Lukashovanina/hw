@@ -27,7 +27,7 @@ protocol CarProtocol {
     func alarmSystem()
 }
 
-    extension CarProtocol {
+extension CarProtocol {
     
     func actionDoors(action: ActionDoors) {
         switch action {
@@ -99,18 +99,18 @@ class SportCar: CarProtocol {
     }
     
 }
-    extension SportCar{
-        func printType() {
-            print("Эта машина типа SportCar")
+extension SportCar{
+    func printType() {
+        print("Эта машина типа SportCar")
             
         }
     }
 //имплементируем классу SportCar протокол "CustomStringConvertible"
 
 
-    extension SportCar: CustomStringConvertible {
-        var description: String {
-            return("Автомобиль марки \(mark),цвет \(color),\(ageCar) года выпуска,\nкоробка передач \(transmission).В комплектации машины \(sunroof.rawValue),\nсигнализация \(alarm)")
+extension SportCar: CustomStringConvertible {
+    var description: String {
+        return("Автомобиль марки \(mark),цвет \(color),\(ageCar) года выпуска,\nкоробка передач \(transmission).В комплектации машины \(sunroof.rawValue),\nсигнализация \(alarm)")
         }
     }
 
@@ -172,18 +172,18 @@ class TrunkCar:  CarProtocol {
         print("Орет сигнализация.Несанкционированное проникновение в машину")
         }
     }
-    extension TrunkCar{
-        func printType() {
-            print("Эта машина типа TrunkCar")
+extension TrunkCar{
+    func printType() {
+        print("Эта машина типа TrunkCar")
                 
         }
     }
 
 // имплементируем классу SportCar протокол "CustomStringConvertible"
 
-    extension TrunkCar: CustomStringConvertible {
-        var description: String {
-            return("Автомобиль марки \(mark),цвет \(color),\(ageCar) года выпуска,\nобъем кузова \(obemFullKuzov),\nсигнализация\(alarm),сейчас кузов \(obemKuzov)")
+extension TrunkCar: CustomStringConvertible {
+    var description: String {
+        return("Автомобиль марки \(mark),цвет \(color),\(ageCar) года выпуска,\nобъем кузова \(obemFullKuzov),\nсигнализация\(alarm),сейчас кузов \(obemKuzov)")
         }
     }
 
